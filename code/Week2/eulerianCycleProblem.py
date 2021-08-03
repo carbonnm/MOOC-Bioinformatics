@@ -2,7 +2,7 @@
     Input: The adjacency list of an Eulerian directed graph.
     Output: An Eulerian cycle in this graph.
 """
-def printEulerianCycle(graph):
+def eulerianCycle(graph):
     #First, we are going to store for each node the number of edges that are emerging from them
     #That's why we'll need a dictionnary to store this information
     edges = {}
@@ -66,4 +66,4 @@ def printEulerianCycle(graph):
 
 #Random test
 
-print(printEulerianCycle([[3], [0], [1, 6], [2], [2], [4], [5, 8], [9], [7], [6]]))
+print(eulerianCycle([[3], [0], [1, 6], [2], [2], [4], [5, 8], [9], [7], [6]]))

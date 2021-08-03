@@ -9,7 +9,6 @@ def overlap(patterns):
     #I'll create a dictionnary to store each pattern with its adjacency list dedicated.
     #The advantage is the keys that help the storage. 
     dico = {}
-    elements = []
     length = len(patterns[0])
     #We'll need a boucle to browse the patterns
     for i in range (len(patterns)):

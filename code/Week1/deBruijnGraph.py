@@ -26,6 +26,7 @@ def deBruijn(k, text):
      #Let's print the answer now
      for key, value in adjacency.items():
           print(key, "-->", value)
+     return adjacency
 
 #Random test
 print(deBruijn(4, 'AAGATTCTCTAAGA'))

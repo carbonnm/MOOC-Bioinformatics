@@ -28,7 +28,6 @@ def eulerianCycle(graph):
     eularian = []
     for i in range(len(cycle) - 1, -1, -1):
         eularian.append(cycle[i])
-    
     return eularian
 
 
@@ -49,6 +48,8 @@ def eulerianPath(adjacency):
     for sublist in adjacency:
         for item in sublist:
             temporary.append(item)
+    
+    print(temporary)
 
     #Now that we have a simple list with just the different nodes that are reached by an edge,
     #we can simply count the occurences of each node in the temporary list. 
@@ -73,7 +74,8 @@ def eulerianPath(adjacency):
             outdegree[node] = outdegree[node] + 1
         else:
             indegree[node] = indegree[node] + 1
-
+        
+        print(node)
         #+We have of course to modify the adjacency itself. 
         if node == problematicNodes[0]:
             adjacency[problematicNodes[0]].append(problematicNodes[1])
@@ -104,8 +106,10 @@ def eulerianPath(adjacency):
     for i in range (len(answer)):
         print(answer[i], end = "")
         print(" -> ", end = "")
+    return answer
     
 
 
 #Random test
-print(eulerianPath([[2], [3], [1], [0, 4], [], [], [3, 7], [8], [9], [6]]))
+#print(eulerianPath([[2], [3], [1], [0, 4], [], [], [3, 7], [8], [9], [6]]))
+print(eulerianPath([[5], [6], [1], [4], [0], [2], []]))

@@ -59,10 +59,12 @@ def eulerianCycle(graph):
     #I had to read the range function documentation
     #The three arguments means the start, the stop and the step.
     #The -1 allow us to decrement because the list is now reversed.
+    eularian = []
     for i in range(len(cycle) - 1, -1, -1):
         print(cycle[i], end = "")
         print(" -> ", end = "")
-
+        eularian.append(cycle[i])
+    return eularian
 
 #Random test
 
